@@ -1,0 +1,48 @@
+**Suggestions:**
+- Use meaningful variable names to improve code readability.
+- Example: 
+    int elapsedTimeInDays; // elapsed time in days
+
+**Suggestions:**
+- Use a more descriptive variable name.
+- Example:
+    var employeeList = db.GetFromService().ToList(); // Get List of employees
+
+
+**Suggestions:**
+- Avoid using prefixes like `i`, `str`, and `d`. Use descriptive names instead.
+- Example: 
+    int counter; string fullName; DateTime modifiedDate;
+
+
+**Suggestions:**
+- Use more descriptive parameter names.
+- Example:
+    public bool IsShopOpen(string day, int amount) { // some logic }
+
+
+**Suggestions:**
+- Maintain consistent naming conventions (e.g., PascalCase for constants and methods).
+- Example: 
+    const int DaysInWeek = 7; 
+    const int DaysInMonth = 30;
+    var songs = new List { "Back In Black", "Stairway to Heaven", "Hey Jude" }; 
+    var artists = new List { "ACDC", "Led Zeppelin", "The Beatles" };
+    bool EraseDatabase() {} 
+    bool RestoreDatabase() {}
+    class Animal {} 
+    class Alpaca {}
+
+**Suggestions:**
+- Use descriptive property names.
+- Correct the `Datetime` type to `DateTime`.
+- Example:
+    public class Employee { public DateTime StartWorkDate { get; set; } // get set Start Working Date 
+    public DateTime ModificationTime { get; set; } // get set Modification Time }
+
+
+**Suggestions:**
+- Use descriptive variable names.
+- Example:
+    var employeePhone;
+    public double CalculateSalary(int workingDays, int workingHours) { // some logic }
