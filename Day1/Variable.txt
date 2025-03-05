@@ -1,0 +1,77 @@
+ 
+
+## Review1 Comments
+1. **Use a HashSet for Days**: Instead of multiple `if-else` statements, use a `HashSet` to store the days when the shop is open. This makes the code more readable and maintainable.
+2. **Simplify Return Statements**: The nested `if-else` statements can be simplified to reduce complexity.
+3. **Early Return**: Use early return to handle the case when `day` is null or empty, which can make the code cleaner.
+## Refactored Code
+    public bool IsShopOpen(string day) { 
+        if (string.IsNullOrEmpty(day))
+        { 
+            return false;
+        }
+        var openDays = new HashSet<string> { "friday", "saturday", "sunday" };
+        return openDays.Contains(day.ToLower());
+    }
+
+
+## Review3 Comments
+1. **Simplify Conditional Statements**: The nested `if` statements can be simplified to improve readability.
+2. **Use Guard Clauses**: Use guard clauses to handle edge cases early and reduce nesting.
+3. **Use Specific Exception**: Throw a more specific exception type, such as `ArgumentOutOfRangeException`, for better clarity.
+## Refactored Code
+    public long Fibonacci(int n) { if (n >= 50) { throw new ArgumentOutOfRangeException(nameof(n), "Not supported for n >= 50"); }
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+
+## Review4 Comments
+1. **Use Meaningful Variable Names**: Use more descriptive variable names to improve code readability and maintainability.
+2. **Use `foreach` Loop**: Use a `foreach` loop instead of a `for` loop when iterating over collections, as it is more readable and less error-prone.
+3. **Remove Unnecessary Comments**: Remove comments that do not add value or context to the code.
+## Refactored Code
+    var l = new[] { "Austin", "New York", "San Francisco" };
+    for (var i = 0; i < l.Count(); i++) { var li = l[i]; DoStuff(); DoSomeOtherStuff();
+    // ...
+    // ...
+    // ...
+    // Wait, what is `li` for again?
+    Dispatch(li);
+
+## Review5 Comments
+1. **Use Constants for Magic Numbers**: Replace the magic number `8` with a named constant to improve code readability and maintainability.
+2. **Add Code Inside the Block**: Ensure that the `if` block contains meaningful code or a comment explaining why it is empty.
+## Refactored Code
+    const int AdminRole = 8;
+    if (userRole == AdminRole) // Check if Admin { // Add admin-specific logic here }
+
+## Review6 Comments
+1. **Use Consistent Naming Conventions**: Use consistent naming conventions for properties. In C#, properties are typically named using PascalCase without prefixes like `Car`.
+2. **Add Constructor**: Consider adding a constructor to initialize the properties.
+## Refactored Code
+    public class Car { public string Make { get; set; } public string Model { get; set; } public string Color { get; set; }
+    public Car(string make, string model, string color)
+    {
+        Make = make;
+        Model = model;
+        Color = color;
+    }
+
+## Review9 Comments
+1. **Use Null-Coalescing Operator**: Use the null-coalescing operator `??` to simplify the assignment of `breweryName`.
+2. **Add Method Documentation**: Add XML documentation comments to describe the method and its parameters.
+## Refactored Code
+    /// Creates a microbrewery with the specified name. ///  /// The name of the microbrewery. If null, defaults to "Hipster Brew Co." 
+    public void CreateMicrobrewery(string name = null) 
+    {
+    var breweryName = name ?? "Hipster Brew Co."; 
+    // ... 
+    }
+ 
+ 
